@@ -1,0 +1,22 @@
+#!/bin/bash
+set -e
+
+echo -n "Enter your glitchless ssh username: "
+read sshuser
+echo -n "Enter your glitchless ssh host: "
+read sshhost
+echo "Will connect by ssh to $sshuser@$sshhost"
+
+echo
+echo "-----> Building docker image"
+docker build -t rhythm_blast/promo .
+
+echo
+echo "-----> Pushing docker image"
+docker tag rhythm_blast/promo registry.glitchless.ru/rhythm_blast/promo:latest
+docker login registry.glitchless.ru -u null -p null
+docker push registry.glitchless.ru/rhythm_blast/promo:latest
+
+echo
+echo "-----> Triggering ansible"
+ssh $sshuser@$sshhost -t "cd /home/ansible/ansible && sudo ansible-playbook playbook.yml"
