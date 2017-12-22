@@ -4,14 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
-    
-    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
-    <meta name="author" content="Bartek Szopka" />
+    <title>Rhythm Blast - Promo</title>
+    <meta name="description" content="Rhythm Blast Promo" />
+    <meta name="author" content="glitchless team" />
 
     <link href="//fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
     <link href="css/impress-demo.css" rel="stylesheet" />
     <link href="css/rhythm-blast.css" rel="stylesheet" />
@@ -20,60 +19,13 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
 
-<!--
-    
-    Body element is used by impress.js to set some useful class names, that will allow you to detect
-    the support and state of the presentation in CSS or other scripts.
-    
-    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
-    support features required by impress.js, so you should apply some fallback styles in your CSS.
-    It's not necessary to add it manually on this element. If the script detects that browser is not
-    good enough it will add this class, but keeping it in HTML means that users without JavaScript
-    will also get fallback styles.
-    
-    When impress.js script detects that browser supports all required features, this class name will
-    be removed.
-    
-    The class name on body element also depends on currently active presentation step. More details about
-    it can be found later, when `hint` element is being described.
-    
--->
 <body class="impress-not-supported">
-
-<!--
-    For example this fallback message is only visible when there is `impress-not-supported` class on body.
--->
 <div class="fallback-message">
     <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
-<!--
-    
-    Now that's the core element used by impress.js.
-    
-    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
-    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
-    
-    You probably won't need it now, but there are some configuration options that can be set on this element.
-    
-    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
-    a number of ms. It defaults to 1000 (1s).
-    
-    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
-    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
-    If you are willing to change this value make sure you understand how CSS perspective works:
-    https://developer.mozilla.org/en/CSS/perspective
-    
-    But as I said, you won't need it for now, so don't worry - there are some simple but interesting things
-    right around the corner of this tag ;)
-    
-    ----------
-    Plugins: We set the default time for autoplay plugin to 6 seconds. Autoplay will automatically advance
-    to next slide after a timeout expires.
-    
--->
-<!--<div id="impress" data-autoplay="7">-->
+
 <div id="impress">
 
     <!--
@@ -98,7 +50,7 @@
     -->
     <div id="sld_bored" class="step slide" data-x="-1000" data-y="-1500" data-autoplay="10">
         <div class="slide__container theme-space">
-
+            <img class="theme-space__logo" src="pics/space_sticker.png">
         </div>
         <!--<div class="slide__content">Привет, с вами Джонни Кэтсвилл, и сегодня мы будем удалять Kotlin</div>-->
     </div>
@@ -118,7 +70,7 @@
         Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
         
     -->
-    <div id="sld_introducing" class="step slide" data-x="0" data-y="-1500">
+    <div id="sld_introducing" class="step slide" data-x="500" data-y="-1500">
         <div class="slide__container">
             <div class="slide__number">2</div>
             <div class="slide__title">Команда</div>
@@ -148,6 +100,12 @@
                         <div class="member-item__role-primary">frontend</div>
                         <div class="member-item__role-secondary">gamedev</div>
                     </div>
+                    <div class="member-item">
+                        <img class="member-item__avatar" src="pics/warprobot.png">
+                        <div class="member-item__nickname">warprobot</div>
+                        <div class="member-item__role-primary">mentor</div>
+                        <div class="member-item__role-secondary">gamedev</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -155,20 +113,35 @@
         <!--<div class="slide__content">Представление команды</div>-->
     </div>
 
-    <div id="sld_genres" class="step slide" data-x="1000" data-y="-1500">
+    <div id="sld_genres" class="step slide" data-x="2000" data-y="-1500">
         <div class="slide__container">
             <div class="slide__number">3</div>
-            <div class="slide__title">Образ игры, концепт жанра</div>
-            <div class="slide__content">Арканоид. Хардкор. Круги.</div>
+            <div class="slide__title">О чём игра?</div>
+            <div class="slide__content">
+                <div class="arkanoid-field">
+                    <div class="arkanoid-blocks">
+                        <div class="arkanoid-elem-block"></div>
+                    </div>
+                    <div class="arkanoid-elem-ball"></div>
+                    <div class="arkanoid-player"></div>
+                </div>
+                <div class="bumper-top"><b>Arkanoid</b> - игра 1986 года за авторством Atari.</div>
+                <div class="bumper-top">Очень полюбилась игрокам, и, в последствии, дала название целому жанру видеоигр.</div>
+                <div class="bumper-top"><b>Мы задумались:</b> чем можно разнообразить классический геймплей?</div>
+            </div>
         </div>
     </div>
 
-    <div id="sld_game" class="step slide" data-x="1000" data-y="-2500">
+    <div id="sld_game" class="step slide" data-x="2750" data-y="-2500">
         <div class="slide__game">
             <iframe class="slide__iframe" src="http://glitchless.ru">
                 Ваш браузер не поддерживает плавающие фреймы!
             </iframe>
+            <!--<div class="slide-control-prev">&lt;</div>-->
+            <!--<div class="slide-control-next">&gt;</div>-->
         </div>
+        <div class="slide-control-prev">&lt;</div>
+        <div class="slide-control-next">&gt;</div>
     </div>
 
     <!--<div id="its-in-3d" class="step slide" data-x="1000" data-y="0" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">-->
@@ -184,25 +157,12 @@
         <!--</div>-->
     <!--</div>-->
 
-    <div id="sld_unspelled" class="step slide" data-x="2000" data-y="-1500">
+    <div id="sld_unspelled" class="step slide" data-x="3500" data-y="-1500">
         <div class="slide__container">
             <div class="slide__number">4</div>
             <div class="slide__title">Про это мы говорить не собираемся</div>
             <div class="slide__content">
                 <div class="feature-list bumper-top">
-                    <!--<div class="feature-item">-->
-                        <!--#noFeature webpack typescript javascript nginx, Ресурсная система-->
-
-                        <!--#noFeature Java Spring Agile Postgresql Шаринг потоков-->
-
-                        <!--#noFeature тиковая система, вебсокеты, PIXI, модульная архитектура-->
-
-                        <!--#noFeature роутинг, HTTP/2, https, кэширование статики, сжимание статики, service worker, Event Bus, VPS, scss, pug-->
-
-                        <!--#noFeature БЭМ, ES6, CSS-in-JS, Fetch API, CORS, ESLint, JSDoc-->
-
-                        <!--#noFeature Балансировка игроков, лобби, комната ожидания-->
-                    <!--</div>-->
                     <div class="feature-item service">Webpack</div>
                     <div class="feature-item">Resource system</div>
                     <div class="feature-item lang">Javascript</div>
@@ -212,8 +172,8 @@
                     <div class="feature-item">Agile</div>
                     <div class="feature-item service">PostgreSQL</div>
                     <div class="feature-item">Thread sharing</div>
-                    <div class="feature-item">Websockets</div>
                     <div class="feature-item service">PIXI.js</div>
+                    <div class="feature-item">Websockets</div>
                     <div class="feature-item">Routing</div>
                     <div class="feature-item">Кэширование статики</div>
                     <div class="feature-item lang">Typescript</div>
@@ -236,26 +196,68 @@
                     <div class="feature-item">Комната ожидания</div>
                 </div>
                 <div class="bumper-top">Всё это у нас есть!</div>
+                <div class="bumper-top">В нашем проекте использовано множество технических приёмов и решений.</div>
+                <div>Часть из них могла встретиться в предыдущих презентациях.</div>
             </div>
         </div>
     </div>
 
-    <div id="sld_advantages" class="step slide" data-x="3000" data-y="-1500">
+    <div id="sld_advantages" class="step slide" data-x="5000" data-y="-1500">
         <div class="slide__container">
             <div class="slide__number">5</div>
-            <div class="slide__title">А вот про это - ещё как</div>
+            <div class="slide__title">Особенности проекта</div>
+            <div class="slide__content">
+                <div class="feature-block-list">
+                    <div class="feature-block-item">
+                        <div class="feature-block-item__picture-container">
+                            <img class="feature-block-item__picture" src="pics/docker.png">
+                        </div>
+                        <div class="feature-block-item__content">
+                            <div class="feature-block-item__title">Коллизии</div>
+                            <div class="feature-block-item__description">
+                                Собственная система коллизий
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-block-item">
+                        <div class="feature-block-item__picture-container">
+                            <img class="feature-block-item__picture" src="pics/docker.png">
+                        </div>
+                        <div class="feature-block-item__content">
+                            <div class="feature-block-item__title">Progressive Management</div>
+                            <div class="feature-block-item__description">
+                                Распределение задач по возможностям каждого члена команды
+                                приводит к равномерному графику распределения коммитов.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                Коллизии
+                Kotlin
+                Clean Architecture
+                Management
+            </div>
+        </div>
+    </div>
+
+    <div id="sld_advantages_code-sharing" class="step slide" data-x="6500" data-y="-1500">
+        <div class="slide__container">
+            <div class="slide__number">6</div>
+            <div class="slide__title">Code Sharing</div>
             <div class="slide__content">Кстати, про что?</div>
         </div>
     </div>
 
-    <div id="sld_deploy" class="step slide" data-x="4000" data-y="-1500">
+    <div id="sld_deploy" class="step slide" data-x="8000" data-y="-1500">
         <div class="slide__container">
             <div class="slide__number">6</div>
             <div class="slide__title">Hype Driven Deploy</div>
             <div class="slide__content">
                 <div class="feature-block-list">
                     <div class="feature-block-item">
-                        <img class="feature-block-item__picture" src="pics/docker.png">
+                        <div class="feature-block-item__picture-container">
+                            <img class="feature-block-item__picture" src="pics/docker.png">
+                        </div>
                         <div class="feature-block-item__content">
                             <div class="feature-block-item__title">Docker</div>
                             <div class="feature-block-item__description">
@@ -264,16 +266,20 @@
                         </div>
                     </div>
                     <div class="feature-block-item">
-                        <div class="feature-block-item__content right-aligned">
+                        <div class="feature-block-item__picture-container">
+                            <img class="feature-block-item__picture" src="pics/docker-registry.png">
+                        </div>
+                        <div class="feature-block-item__content">
                             <div class="feature-block-item__title">Docker Registry</div>
                             <div class="feature-block-item__description">
                                 Свои образы мы храним у себя - так целее будет. Серьезно.
                             </div>
                         </div>
-                        <img class="feature-block-item__picture" src="pics/container-management.png">
                     </div>
                     <div class="feature-block-item">
-                        <img class="feature-block-item__picture" src="pics/ansible.png">
+                        <div class="feature-block-item__picture-container">
+                            <img class="feature-block-item__picture" src="pics/ansible.png">
+                        </div>
                         <div class="feature-block-item__content">
                             <div class="feature-block-item__title">Ansible</div>
                             <div class="feature-block-item__description">
@@ -294,25 +300,70 @@
         <!--</div>-->
     <!--</div>-->
 
-    <div id="its" class="step" data-x="5000" data-y="-1500" data-rotate="45" data-scale="5">
-        <p><strong>Спасибо</strong>
-    </div>
-
-    <div id="its2" class="step" data-x="5000" data-y="-1500" data-rotate="90" data-scale="5">
-        <p><strong>за</strong></p>
-    </div>
-
-    <div id="its3" class="step" data-x="5000" data-y="-1500" data-rotate="135" data-scale="5">
-        <p><strong>внимание</strong></p>
-    </div>
+    <!--<div id="its" class="step" data-x="7500" data-y="-1500" data-rotate="90" data-scale="5">-->
+        <!--<p><strong>Спасибо за внимание</strong>-->
+    <!--</div>-->
 
 
-    <div id="sld_end" class="step slide" data-x="5000" data-y="-1500" data-rotate="180">
+    <!--<div id="sld_end" class="step slide" data-x="9500" data-y="-1500" data-rotate="180">-->
+        <!--<div class="slide__container theme-thanks">-->
+            <!--<div class="slide__number">7</div>-->
+            <!--<div class="slide__title">Бум, спасибо за внимание</div>-->
+            <!--<div class="slide__content">Контакты</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div id="sld_end" class="step slide" data-x="9500" data-y="-1500">
         <div class="slide__container">
-            <div class="slide__number">7</div>
-            <div class="slide__title">Бум, спасибо за внимание</div>
-            <div class="slide__content">Контакты</div>
+            <div class="slide__title">Спасибо за внимание!</div>
+            <div class="slide__content">
+                <div class="member-list-embedded">
+                    <div class="member-list">
+                        <div class="member-item">
+                            <img class="member-item__avatar" src="pics/stealthtech.jpg">
+                            <div class="member-item__nickname">StealthTech</div>
+                            <div class="member-item__role-primary">design</div>
+                            <div class="member-item__role-secondary">frontend</div>
+                        </div>
+                        <div class="member-item">
+                            <img class="member-item__avatar" src="pics/reo7sp.jpg">
+                            <div class="member-item__nickname">reo7sp</div>
+                            <div class="member-item__role-primary">frontend</div>
+                            <div class="member-item__role-secondary">dev ops</div>
+                        </div>
+                        <div class="member-item">
+                            <img class="member-item__avatar" src="pics/lionzxy.jpg">
+                            <div class="member-item__nickname">LionZXY</div>
+                            <div class="member-item__role-primary">backend</div>
+                            <div class="member-item__role-secondary">frontend</div>
+                        </div>
+                        <div class="member-item">
+                            <img class="member-item__avatar" src="pics/ansile.jpg">
+                            <div class="member-item__nickname">Ansile</div>
+                            <div class="member-item__role-primary">frontend</div>
+                            <div class="member-item__role-secondary">gamedev</div>
+                        </div>
+                        <div class="member-item">
+                            <img class="member-item__avatar" src="pics/warprobot.png">
+                            <div class="member-item__nickname">warprobot</div>
+                            <div class="member-item__role-primary">mentor</div>
+                            <div class="member-item__role-secondary">gamedev</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="thanks-block">
+                    Отдельное спасибо создателю официального плагина для интеграции
+                    <span class="text-important">kotlin</span> и <span class="text-important">webpack</span>,
+                    а также сотрудникам JetBrains <span class="text-important">Андрею Складчикову</span>
+                    и <span class="text-important">Руслану Ибрагимову</span>.
+                </div>
+                <div class="logo-team-container">
+                    <img class="logo-team" src="pics/logo_stock_black.png">
+                </div>
+            </div>
         </div>
+        <!--<div class="slide__number">2</div>-->
+        <!--<div class="slide__content">Представление команды</div>-->
     </div>
 
 
@@ -507,8 +558,12 @@ if ("ontouchstart" in document.documentElement) {
     Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
     
 -->
+<script src="libs/jquery-3.2.1.min.js"></script>
 <script src="js/impress.js"></script>
-<script>impress().init();</script>
+<script src="js/ext.js"></script>
+<script>
+
+</script>
 
 <!--
     
@@ -582,4 +637,3 @@ if ("ontouchstart" in document.documentElement) {
     Cheers!
     
 -->
-
