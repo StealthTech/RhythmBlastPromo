@@ -330,16 +330,46 @@ b {
 }
 
 .adv-multiplayer__ul {
-    /*width: 50%;*/
+    width: 50%;
 }
 
 .adv-multiplayer__picture-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 50%;
+    font-size: 14pt;
+    color: #1a4159;
 }
 
 .adv-multiplayer__picture {
     width: 100%;
+}
+
+.adv-code-sharing-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.adv-code-sharing__content {
+    width: 60%;
+}
+
+.adv-code-sharing__picture-container {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.adv-code-sharing__picture {
+    width: 100%;
+}
+
+.bumped-right-bottom {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
 }
