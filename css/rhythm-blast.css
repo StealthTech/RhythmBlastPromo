@@ -323,3 +323,23 @@ b {
 .text-important {
     color: #e17d86;
 }
+
+.adv-multiplayer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adv-multiplayer__ul {
+    /*width: 50%;*/
+}
+
+.adv-multiplayer__picture-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.adv-multiplayer__picture {
+    width: 100%;
+}
