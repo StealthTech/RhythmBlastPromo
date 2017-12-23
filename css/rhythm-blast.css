@@ -295,6 +295,27 @@ b {
     height: 100px;
 }
 
+.li-styled-container {
+    margin-bottom: 15px;
+}
+
+.li-styled__title {
+    display: inline-block;
+    background: #cee9e9;
+    color: darkcyan;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+
+.li-styled__content {
+    font-size: 14pt;
+    padding: 15px;
+}
+
+.picture-padded {
+    height: 70%;
+}
+
 .text-decorated {
     color: #1a4159;
 }

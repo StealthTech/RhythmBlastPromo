@@ -52,7 +52,6 @@
         <div class="slide__container theme-space">
             <img class="theme-space__logo" src="pics/space_sticker.png">
         </div>
-        <!--<div class="slide__content">Привет, с вами Джонни Кэтсвилл, и сегодня мы будем удалять Kotlin</div>-->
     </div>
 
     <!--
@@ -207,48 +206,99 @@
             <div class="slide__number">5</div>
             <div class="slide__title">Особенности проекта</div>
             <div class="slide__content">
-                <div class="feature-block-list">
-                    <div class="feature-block-item">
-                        <div class="feature-block-item__picture-container">
-                            <img class="feature-block-item__picture" src="pics/docker.png">
-                        </div>
-                        <div class="feature-block-item__content">
-                            <div class="feature-block-item__title">Коллизии</div>
-                            <div class="feature-block-item__description">
-                                Собственная система коллизий
-                            </div>
-                        </div>
+                <div class="feature-block-item">
+                    <div class="feature-block-item__picture-container">
+                        <img class="feature-block-item__picture picture-padded" src="pics/blueprint.png">
                     </div>
-                    <div class="feature-block-item">
-                        <div class="feature-block-item__picture-container">
-                            <img class="feature-block-item__picture" src="pics/docker.png">
-                        </div>
-                        <div class="feature-block-item__content">
-                            <div class="feature-block-item__title">Progressive Management</div>
-                            <div class="feature-block-item__description">
-                                Распределение задач по возможностям каждого члена команды
-                                приводит к равномерному графику распределения коммитов.
-                            </div>
+                    <div class="feature-block-item__content">
+                        <div class="feature-block-item__title">Clean Architecture</div>
+                        <div class="feature-block-item__description">
+                            Вертикальное и горизонтальное разбиение фич для большей
+                            изоляции компонентов и повышения тестируемости продукта.
                         </div>
                     </div>
                 </div>
-                Коллизии
-                Kotlin
-                Clean Architecture
-                Management
+                <div class="feature-block-item">
+                    <div class="feature-block-item__picture-container">
+                        <img class="feature-block-item__picture picture-padded" src="pics/bars-chart.png">
+                    </div>
+                    <div class="feature-block-item__content">
+                        <div class="feature-block-item__title">Progressive Management</div>
+                        <div class="feature-block-item__description">
+                            Распределение задач по возможностям каждого члена команды
+                            приводит повышению эффективности её работы над проектом.
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-block-item">
+                    <div class="feature-block-item__picture-container">
+                        <img class="feature-block-item__picture picture-padded" src="pics/reflective-triangle.png">
+                    </div>
+                    <div class="feature-block-item__content">
+                        <div class="feature-block-item__title">Собственная система коллизий</div>
+                        <div class="feature-block-item__description">
+                            Распределение задач по возможностям каждого члена команды
+                            приводит повышению эффективности её работы над проектом.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="sld_advantages_code-sharing" class="step slide" data-x="6500" data-y="-1500">
+    <div id="sld_advantages_code-sharing" class="step slide" data-x="5000" data-y="-500">
         <div class="slide__container">
             <div class="slide__number">6</div>
-            <div class="slide__title">Code Sharing</div>
-            <div class="slide__content">Кстати, про что?</div>
+            <div class="slide__title">DRY: Code sharing</div>
+            <div class="slide__content">
+                <!--TODO: Pic-->
+                <div class="bumper-top">
+                    Важной особенностью нашего проекта является шаринг кода между платформами.
+                </div>
+                <div class="bumper-top">
+                    С учётом того что у нас своя система коллизий и интерполяция данных код должен обладать надёжностью,
+                    тестируемостью и совместимостью с обоими платформами.
+                </div>
+                <div class="bumper-top">
+                    Таким образом  один и тот же код на котлине используется одновременно на бекэнде и на фронтэнде.
+                    Один код, одни тесты, две платформы.
+                </div>
+                <div class="bumper-top">
+                    Сама технология вышла в релиз лишь 28 ноября (Kotlin 1.2) и мы одни из первых в мире кто решился использовать её в проекте.
+                </div>
+            </div>
         </div>
     </div>
 
-    <div id="sld_deploy" class="step slide" data-x="8000" data-y="-1500">
+    <div id="sld_advantages_multiplayer" class="step slide" data-x="5000" data-y="500">
+        <div class="slide__container">
+            <div class="slide__number">7</div>
+            <div class="slide__title">Multiplayer</div>
+            <div class="slide__content">
+                <!--TODO: Pic-->
+                <div class="bumper-top">
+                    <div class="li-styled-container">
+                        <div class="li-styled__title">Пакетная логика</div>
+                        <div class="li-styled__content">Зачем? Почему? Непонятно...</div>
+                    </div>
+                    <div class="li-styled-container">
+                        <div class="li-styled__title">Интерполяция данных</div>
+                        <div class="li-styled__content">Зачем? Почему? Непонятно...</div>
+                    </div>
+                    <div class="li-styled-container">
+                        <div class="li-styled__title">Приглашения в игру</div>
+                        <div class="li-styled__content">Зачем? Почему? Непонятно...</div>
+                    </div>
+                    <div class="li-styled-container">
+                        <div class="li-styled__title">Состояние ожидания</div>
+                        <div class="li-styled__content">Зачем? Почему? Непонятно...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sld_deploy" class="step slide" data-x="3500" data-y="500">
         <div class="slide__container">
             <div class="slide__number">6</div>
             <div class="slide__title">Hype Driven Deploy</div>
@@ -313,7 +363,7 @@
         <!--</div>-->
     <!--</div>-->
 
-    <div id="sld_end" class="step slide" data-x="9500" data-y="-1500">
+    <div id="sld_end" class="step slide" data-x="2000" data-y="500">
         <div class="slide__container">
             <div class="slide__title">Спасибо за внимание!</div>
             <div class="slide__content">
